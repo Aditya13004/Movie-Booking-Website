@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventura — Theatres</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="app-header">
+        <div class="brand"><div class="logo">🎬</div><div class="title">Eventura</div></div>
+        <div class="search"></div>
+        <nav class="header-actions">
+            <button onclick="history.back()" class="ghost">← Back</button>
+        </nav>
+    </header>
+    <main class="content">
+        <div class="section-header">
+            <h2 id="movieTitle">Theatres</h2>
+        </div>
+        <div class="theatres">
+            <div class="section-header">
+                <h3>Theaters in <span id="cityName"></span></h3>
+            </div>
+            <div id="theatreList" class="theatre-list"></div>
+        </div>
+    </main>
+    <script src="config.js"></script>
+    <script src="cities.js"></script>
+    <script src="theatres.js"></script>
+</body>
+</html>
+
+

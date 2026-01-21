@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+  </head>
+  <body>
+      <script type="text/javascript">
+      const string1 = 'JavaScript Program';
+      const string2 = 'javascript program';
+      if(string1.toUpperCase() === string2.toUpperCase()) {
+         document.writeln("The strings are similar by method 1" + "<br>");
+      } 
+      else {
+         document.writeln("The strings are not similar by method 1" + "<br>" );
+      }
+      var result = string1.localeCompare(string2);
+      document.writeln(result + "<br>");
+      if(result==0) {
+        document.writeln("The strings are same by method 2" + "<br>");
+      }
+      else {
+        document.writeln("The strings are not same by method 2" + "<br>");
+      }
+      var result1 = string1.match (/Javascript Program/);
+      document.writeln(result1 + "<br>");
+      if(result1==string1) {
+        document.writeln("The strings are same by method 3" + "<br>");
+      }
+      else {
+        document.writeln("The strings are not same by method 3" + "<br>");
+      }     
+</script>
+  </body>
+</html>
+hy

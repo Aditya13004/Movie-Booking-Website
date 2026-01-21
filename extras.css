@@ -1,0 +1,51 @@
+:root{}
+/* Extra styles for F&B, offers, and order summary */
+.hidden { display: none !important; }
+
+.fnb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+}
+.fnb-item {
+  background: var(--elev, #18202a);
+  border: 1px solid #223042;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.fnb-title { font-weight: 600; }
+.fnb-price { color: var(--muted, #9fb0c3); font-size: 14px; }
+.qty {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.qty button {
+  padding: 6px 10px;
+}
+.qty .count {
+  min-width: 20px;
+  text-align: center;
+}
+
+.offer-area { display: flex; gap: 8px; align-items: center; }
+.offers-list { margin-top: 6px; }
+.offers-list ul { margin: 0; padding-left: 18px; color: var(--muted, #9fb0c3); }
+
+.order-summary {
+  border: 1px solid #233143;
+  border-radius: 10px;
+  padding: 10px;
+  background: color-mix(in oklab, var(--surface, #11161d) 85%, transparent);
+}
+.order-summary .summary-row { display: flex; justify-content: space-between; padding: 6px 2px; }
+.order-summary .summary-row.total { border-top: 1px dashed #2c3a4d; margin-top: 8px; padding-top: 10px; font-weight: 700; }
+
+.success-message { display: flex; align-items: center; gap: 12px; }
+.success-icon { font-size: 28px; }
+
+.confirm-card { border: 1px solid #233143; border-radius: 12px; padding: 16px; background: color-mix(in oklab, var(--surface, #11161d) 85%, transparent); }
+.confirm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 10px; }

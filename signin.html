@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In — Eventura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="app-header">
+        <div class="brand">
+            <div class="logo">🎬</div>
+            <div class="title">Eventura</div>
+        </div>
+        <div class="search"></div>
+        <nav class="header-actions">
+            <button onclick="history.back()" class="ghost">← Back</button>
+        </nav>
+    </header>
+
+    <main class="content">
+        <div class="signin-container">
+            <div class="signin-card">
+                <h2>Sign In to Eventura</h2>
+                <p class="signin-subtitle">Enter your mobile number to receive a verification code</p>
+                
+                <div id="mobileStep" class="auth-step">
+                    <div class="form-row">
+                        <label for="mobileInput">Mobile Number</label>
+                        <input id="mobileInput" type="tel" placeholder="9876543210" maxlength="10" />
+                    </div>
+                    <button id="requestOtpBtn" class="signin-btn">Send OTP</button>
+                    <p id="mobileError" class="error-msg hidden"></p>
+                </div>
+
+                <div id="otpStep" class="auth-step hidden">
+                    <div class="form-row">
+                        <label for="otpInput">Enter OTP</label>
+                        <input id="otpInput" type="text" placeholder="123456" maxlength="6" />
+                        <small class="hint">Check server console for the OTP code (dev mode)</small>
+                    </div>
+                    <button id="verifyOtpBtn" class="signin-btn">Verify & Sign In</button>
+                    <button id="resendOtpBtn" class="ghost signin-btn">Resend OTP</button>
+                    <p id="otpError" class="error-msg hidden"></p>
+                </div>
+
+                <div id="successStep" class="auth-step hidden">
+                    <div class="success-message">
+                        <span class="success-icon">✅</span>
+                        <h3>Successfully Signed In!</h3>
+                        <p>Welcome to Eventura. Redirecting you back...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

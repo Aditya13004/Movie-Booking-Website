@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventura — Booking Confirmation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="extras.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <div class="logo">🎬</div>
+      <div class="title">Eventura</div>
+    </div>
+    <div class="search"></div>
+    <nav class="header-actions">
+      <a class="ghost" href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="hero" style="margin-top:16px">
+      <div class="hero-text">
+        <h1>Booking Confirmed</h1>
+        <p>Your tickets are booked. A confirmation is shown below.</p>
+      </div>
+    </section>
+
+    <section class="confirmation">
+      <div class="confirm-card">
+        <div class="success-message">
+          <span class="success-icon">✅</span>
+          <h2 id="cTitle">-</h2>
+          <p id="cSub">-</p>
+        </div>
+        <div class="confirm-grid">
+          <div>
+            <div class="summary-row"><span>Booking ID</span><span id="cId">-</span></div>
+            <div class="summary-row"><span>Movie</span><span id="cMovie">-</span></div>
+            <div class="summary-row"><span>Theatre</span><span id="cTheatre">-</span></div>
+            <div class="summary-row"><span>Showtime</span><span id="cShow">-</span></div>
+            <div class="summary-row"><span>Seats</span><span id="cSeats">-</span></div>
+            <div class="summary-row"><span>Tickets</span><span id="cTickets">0</span></div>
+          </div>
+          <div>
+            <h3>Order Summary</h3>
+            <div class="summary-row"><span>Tickets Subtotal</span><span id="cTicketsSubtotal">₹0</span></div>
+            <div class="summary-row"><span>Food & Beverages</span><span id="cFnbSubtotal">₹0</span></div>
+            <div class="summary-row"><span>Discount</span><span id="cDiscount">-₹0</span></div>
+            <div class="summary-row"><span>Convenience Fee</span><span id="cFee">₹0</span></div>
+            <div class="summary-row"><span>Tax</span><span id="cTax">₹0</span></div>
+            <div class="summary-row total"><span>Total Paid</span><span id="cTotal">₹0</span></div>
+          </div>
+        </div>
+        <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+          <button id="printBtn">Print</button>
+          <a class="ghost" href="index.html">Back to Home</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <div>© <span id="year"></span> Eventura.</div>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </footer>
+
+  <script src="confirmation.js"></script>
+</body>
+</html>
